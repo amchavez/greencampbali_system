@@ -1,33 +1,33 @@
-CREATE TABLE `group` 
-(`id` int(11) NOT NULL auto_increment,
+CREATE TABLE `campgroup` (
+`id` int(11) NOT NULL auto_increment,
 `groupname` varchar(50) NOT NULL,
-`groupaddress` varchar(50) NOT NULL,
+`gaddress` varchar(50) NOT NULL,
 `groupcperson` varchar(50) NOT NULL,
 `groupcnumber` varchar(20) NOT NULL,
 `campname` varchar(32) NOT NULL,
-`campstartdate` varchar(32) NULL,
-`campenddate` varchar(32) NOT NULL,
+`campstartdate` date NOT NULL,
+`campenddate` date NOT NULL,
 PRIMARY KEY (`id`)
 );
 
 ---- Dumping data for table `group`--
-INSERT INTO `group` VALUES (1, 'The Ultimate Campers', 'Houston, Texas', 'Mike Ross', '098234189', 'CAMP1', '01-01-2018', 01-04-2018');
 
-CREATE TABLE `participants` 
-(`id` int(11) NOT NULL auto_increment,
+INSERT INTO `group` VALUES (1, 'The Ultimate Campers', 'Houston, Texas', 'Mike Ross', '098234189', 01-01-2018, 01-03-2018);
+
+CREATE TABLE `participants` (
+`id` int(11) NOT NULL auto_increment,
 `groupname` varchar(32) NOT NULL,
 `pname` varchar(32) NOT NULL,
-`pgender` varchar(1) NOT NULL,
+`pgender' varchar(1) NOT NULL,
 `pnationality` varchar(32) NOT NULL,
 `pemailadd` varchar(32) NOT NULL,
 `pmedcond` varchar(32) NOT NULL,
 `pdietrest` varchar(32) NOT NULL,
 PRIMARY KEY (`id`)
 );
-
 ---- Dumping data for table `participants`--
 
 INSERT INTO `participants` VALUES(1, 'camper1', 'ali', 'm', 'filipino', 'ali@yahoo.com', 'none', 'not on diet');
-INSERT INTO `participants` VALUES(1, 'camper1', 'jo', 'f', 'filipino', 'jo@yahoo.com', 'none', 'not on diet');
-INSERT INTO `participants` VALUES(1, 'camper1', 'chele', 'f', 'filipino', 'r@yahoo.com', 'none', 'not on diet');
+INSERT INTO `participants` VALUES(1, 'camper1', 'pau', 'f', 'filipino', 'pau@yahoo.com', 'none', 'not on diet');
+INSERT INTO `participants` VALUES(1, 'camper1', 'edna', 'f', 'filipino', 'edna@yahoo.com', 'none', 'not on diet');
 INSERT INTO `participants` VALUES(1, 'camper1', 'lino', 'm', 'filipino', 'lino@yahoo.com', 'none', 'not on diet');
